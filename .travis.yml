@@ -1,5 +1,6 @@
 language: c
 os: linux
+sudo: required
 
 addons:
   apt:
@@ -28,7 +29,6 @@ addons:
     - help2man
     - wget
     - bzip2
-    - libtool-bin
 
 install:
   - git clone --recursive https://github.com/pfalcon/esp-open-sdk.git ~/esp-open-sdk
