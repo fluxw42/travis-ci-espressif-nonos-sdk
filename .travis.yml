@@ -8,6 +8,7 @@ addons:
     - unrar-free
     - autoconf
     - git
+    - bison
 
 install:
   - git clone --recursive https://github.com/pfalcon/esp-open-sdk.git ~/esp-open-sdk
