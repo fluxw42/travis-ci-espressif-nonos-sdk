@@ -1,0 +1,14 @@
+language: c
+os: linux
+
+addons:
+  apt:
+    packages:
+    - make
+    - unrar-free
+    - autoconf
+    - git
+
+install:
+  - git clone --recursive https://github.com/pfalcon/esp-open-sdk.git ~/esp-open-sdk
+  - cd ~/esp-open-sdk && make STANDALONE=y
