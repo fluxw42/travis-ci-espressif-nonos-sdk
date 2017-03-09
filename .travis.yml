@@ -7,8 +7,27 @@ addons:
     - make
     - unrar-free
     - autoconf
-    - git
+    - automake
+    - libtool
+    - gcc
+    - g++
+    - gperf
+    - flex
     - bison
+    - texinfo
+    - gawk
+    - ncurses-dev
+    - libexpat-dev
+    - python-dev
+    - python
+    - python-serial
+    - sed
+    - git
+    - unzip
+    - bash
+    - help2man
+    - wget
+    - bzip2
 
 install:
   - git clone --recursive https://github.com/pfalcon/esp-open-sdk.git ~/esp-open-sdk
