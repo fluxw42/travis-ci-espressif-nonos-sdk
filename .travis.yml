@@ -33,4 +33,4 @@ addons:
 
 install:
   - git clone --recursive https://github.com/pfalcon/esp-open-sdk.git ~/esp-open-sdk
-  - cd ~/esp-open-sdk && (make STANDALONE=y || cat config.log)
+  - cd ~/esp-open-sdk && (make STANDALONE=y || cat ~/esp-open-sdk/lx106-hal/config.log)
