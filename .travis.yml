@@ -33,9 +33,7 @@ addons:
     - wget
     - bzip2
 
-script:
-  - sudo unlink /usr/bin/gcc && sudo ln -s /usr/bin/gcc-5 /usr/bin/gcc
-
 install:
+  - sudo unlink /usr/bin/gcc && sudo ln -s /usr/bin/gcc-5 /usr/bin/gcc
   - git clone --recursive https://github.com/pfalcon/esp-open-sdk.git ~/esp-open-sdk
   - cd ~/esp-open-sdk && (make STANDALONE=y || cat ~/esp-open-sdk/lx106-hal/config.log)
