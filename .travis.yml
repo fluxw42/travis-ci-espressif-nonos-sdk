@@ -11,9 +11,8 @@ addons:
     - autoconf
     - automake
     - libtool
-    - gcc
-    - g++
-    - libstdc++
+    - gcc-5
+    - g++-5
     - gperf
     - flex
     - bison
