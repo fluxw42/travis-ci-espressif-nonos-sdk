@@ -1,6 +1,5 @@
 language: c
 os: linux
-env: CC=gcc-5
 dist: trusty
 sudo: required
 
@@ -33,6 +32,9 @@ addons:
     - help2man
     - wget
     - bzip2
+
+script:
+  - sudo unlink /usr/bin/gcc && sudo ln -s /usr/bin/gcc-5 /usr/bin/gcc
 
 install:
   - git clone --recursive https://github.com/pfalcon/esp-open-sdk.git ~/esp-open-sdk
