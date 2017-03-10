@@ -1,5 +1,6 @@
 language: c
 os: linux
+env: CC=gcc-5
 dist: trusty
 sudo: required
 
