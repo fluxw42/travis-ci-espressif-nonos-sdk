@@ -24,3 +24,6 @@ install:
   - git clone -b lx106 git://github.com/jcmvbkbc/crosstool-NG.git ~/Espressif/crosstool-NG
   - cd ~/Espressif/crosstool-NG
   - ./bootstrap && ./configure --prefix=`pwd` && make && make install
+  - ./ct-ng xtensa-lx106-elf
+  - ./ct-ng build
+  - PATH=$PWD/builds/xtensa-lx106-elf/bin:$PATH
