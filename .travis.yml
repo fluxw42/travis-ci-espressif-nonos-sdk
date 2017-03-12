@@ -4,32 +4,23 @@ dist: trusty
 
 addons:
   apt:
-    sources:
-    - ubuntu-toolchain-r-test
     packages:
-    - make
-    - unrar-free
-    - autoconf
-    - automake
-    - libtool
-    - gperf
-    - flex
-    - bison
-    - texinfo
-    - gawk
-    - ncurses-dev
-    - libexpat-dev
-    - python-dev
-    - python
-    - python-serial
-    - sed
     - git
-    - unzip
-    - bash
-    - help2man
+    - autoconf
+    - build-essential
+    - gperf
+    - bison
+    - flex
+    - texinfo
+    - libtool
+    - libncurses5-dev
     - wget
-    - bzip2
+    - gawk
+    - libc6-dev-amd64
+    - python-serial
+    - libexpat-dev
 
 install:
-  - git clone --recursive https://github.com/pfalcon/esp-open-sdk.git ~/esp-open-sdk
-  - cd ~/esp-open-sdk && (make STANDALONE=y || cat ~/esp-open-sdk/lx106-hal/config.log)
+  - mkdir ~/Espressif
+  - git clone -b lx106 git://github.com/jcmvbkbc/crosstool-NG.git ~/Espressif/crosstool-NG
+  - cd ~/Espressif/crosstool-NG && ./bootstrap && ./configure --prefix=`pwd` && make && make install
