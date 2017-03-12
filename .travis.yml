@@ -44,5 +44,4 @@ install:
 script: make
 
 env:
-- XTENSA_TOOLS_ROOT=~/Espressif/crosstool-NG/builds/xtensa-lx106-elf/bin
-- SDK_BASE=~/Espressif/ESP8266_SDK
+- XTENSA_TOOLS_ROOT=~/Espressif/crosstool-NG/builds/xtensa-lx106-elf/bin SDK_BASE=~/Espressif/ESP8266_SDK
