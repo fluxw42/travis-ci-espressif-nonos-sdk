@@ -4,6 +4,8 @@ dist: trusty
 
 addons:
   apt:
+    sources:
+    - ubuntu-toolchain-r-test
     packages:
     - git
     - autoconf
@@ -23,4 +25,5 @@ addons:
 install:
   - mkdir ~/Espressif
   - git clone -b lx106 git://github.com/jcmvbkbc/crosstool-NG.git ~/Espressif/crosstool-NG
-  - cd ~/Espressif/crosstool-NG && ./bootstrap && ./configure --prefix=`pwd` && make && make install
+  - cd ~/Espressif/crosstool-NG
+  - ./bootstrap && ./configure --prefix=`pwd` && make && make install
