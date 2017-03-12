@@ -17,6 +17,7 @@ addons:
     - gawk
     - python-serial
     - libexpat-dev
+    - python-serial
 
 install:
   - mkdir ~/Espressif
@@ -45,4 +46,4 @@ install:
 env:
 - XTENSA_TOOLS_ROOT=~/Espressif/crosstool-NG/builds/xtensa-lx106-elf/bin SDK_BASE=~/Espressif/ESP8266_SDK ESPTOOL=~/Espressif/esptool/esptool.py
 
-script: cd "$TRAVIS_BUILD_DIR" && make
+script: make -C "$TRAVIS_BUILD_DIR"
