@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/bin/bash
 
-if [ ! -d "~/Espressif" ]; then
+if [ ! -d "/home/travis/Espressif/esptool" ]; then
 
 	# Download and build lx106 cross-tool
 	mkdir ~/Espressif
