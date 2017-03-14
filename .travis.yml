@@ -25,6 +25,6 @@ install:
   - "$TRAVIS_BUILD_DIR/.travis/setup-build-environment.sh"
 
 env:
-- XTENSA_TOOLS_ROOT=~/Espressif/crosstool-NG/builds/xtensa-lx106-elf/bin SDK_BASE=~/Espressif/ESP8266_SDK ESPTOOL=~/Espressif/esptool/esptool.py
+- XTENSA_TOOLS_ROOT=~/Espressif/crosstool-NG/builds/xtensa-lx106-elf/bin SDK_BASE=~/Espressif/ESP8266_SDK ESPTOOL=~/Espressif/esptool/esptool.py PATH=$XTENSA_TOOLS_ROOT:$PATH
 
 script: make -C "$TRAVIS_BUILD_DIR"
