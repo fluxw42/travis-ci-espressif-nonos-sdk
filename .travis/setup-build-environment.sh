@@ -33,6 +33,7 @@ if [ ! -d "/home/travis/Espressif/esptool" ]; then
 
 	# Install ESP tool and dependencies
 	git clone -b v1.3 https://github.com/espressif/esptool.git ~/Espressif/esptool
-	pip install pyserial
 
 fi
+
+pip install pyserial
