@@ -1,9 +1,11 @@
 #!/bin/bash
 
+set -e
+
 if [ ! -d "/home/travis/Espressif/esptool" ]; then
 
 	# Download and build lx106 cross-tool
-	mkdir ~/Espressif
+	mkdir -p ~/Espressif
 	git clone -b lx106 git://github.com/jcmvbkbc/crosstool-NG.git ~/Espressif/crosstool-NG
 	cd ~/Espressif/crosstool-NG
 	./bootstrap && ./configure --prefix=`pwd` && make && make install
